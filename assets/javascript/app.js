@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(e) {
   const loadSchedule = () => {
+    console.log('callback inside loadSchedule');
     // clear the table container
     // go to db and grab the data,
     // build the table for the UI
@@ -8,9 +9,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log('clicked');
     // build up the object that will be saved into the DB
     // save the data on the db
     // update the view with the new data
     loadSchedule();
   };
+
+  document.querySelector('form').addEventListener('submit', handleSubmit);
 });
