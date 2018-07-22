@@ -1,6 +1,23 @@
 document.addEventListener('DOMContentLoaded', function(e) {
+  firebaseMock = [
+    {
+      name: 'GO East',
+      destination: 'Oshawa',
+      firstTrain: '04:15',
+      frequency: '30'
+    },
+    {
+      name: 'GO West',
+      destination: 'Hamilton',
+      firstTrain: '03:30',
+      frequency: '30'
+    }
+  ];
+
   const loadSchedule = () => {
     console.log('loadSchedule');
+
+    document.querySelector('.table-mount').innerHTML = '';
     // clear the table container
     // go to db and grab the data,
     // build the table for the UI
