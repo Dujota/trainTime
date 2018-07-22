@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('clicked');
-    // ui variables
-    const name = document.getElementById('trainName');
-    const destination = document.getElementById('destination');
-    const frequency = document.getElementById('frequency');
-    const firstTrain = document.getElementById('firstTrain');
+    // Input Values
+    const name = document.getElementById('trainName').value;
+    const destination = document.getElementById('destination').value;
+    const frequency = document.getElementById('frequency').value;
+    const firstTrain = document.getElementById('firstTrain').value;
 
+    console.log(name, destination, frequency, firstTrain);
     // build up the object that will be saved into the DB
     // save the data on the db
     // update the view with the new data
