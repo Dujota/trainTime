@@ -16,11 +16,26 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
   const loadSchedule = () => {
     console.log('loadSchedule');
+    let tableContents = '';
+    const table = document.querySelector('.table-mount');
 
-    document.querySelector('.table-mount').innerHTML = '';
     // clear the table container
+    document.querySelector('.table-mount').innerHTML = '';
     // go to db and grab the data,
+
     // build the table for the UI
+    firebaseMock.forEach(record => {
+      tableContents += `<tr>
+      <td>${record.name}</td>
+      <td>${record.destination}</td>
+      <td>${record.frequency}</td>
+      <td>need to add</td>
+      <td>need to add</td>
+    </tr>`;
+
+      table.innerHTML = tableContents;
+    });
+
     // Insert the table into the UI
   };
 
@@ -39,5 +54,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     loadSchedule();
   };
 
+  // Run the app
+  loadSchedule();
   document.querySelector('form').addEventListener('submit', handleSubmit);
 });
