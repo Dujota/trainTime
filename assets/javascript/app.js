@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
   const handleSubmit = e => {
     e.preventDefault();
     console.log('clicked');
+    // ui variables
+    const name = document.getElementById('trainName');
+    const destination = document.getElementById('destination');
+    const frequency = document.getElementById('frequency');
+    const firstTrain = document.getElementById('firstTrain');
 
     // build up the object that will be saved into the DB
     // save the data on the db
