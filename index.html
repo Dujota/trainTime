@@ -22,68 +22,71 @@
         <p class="lead">Choo choo. Chee Chee</p>
       </div>
     </div>
-
-    <!-- Current Train Schddule Table -->
-    <div class="card">
-      <div class="card-header">
-        Current Train Schedule
+    <div class="container">
+      <!-- Current Train Schddule Table -->
+      <div class="card">
+        <div class="card-header">
+          Current Train Schedule
+        </div>
+        <div class="card-body table-responsive">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody class="table-mount">
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="card-body">
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Train Name</th>
-              <th scope="col">Destination</th>
-              <th scope="col">Frequency (min)</th>
-              <th scope="col">Next Arrival</th>
-              <th scope="col">Minutes Away</th>
-            </tr>
-          </thead>
-          <tbody class="table-mount">
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- Input Fields for Adding Train -->
-    <div class="card">
-      <div class="card-header">
-        Add Train
-      </div>
-      <form class="card-body">
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Train Name</span>
-          </div>
-          <input type="text" class="form-control" id="trainName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      <!-- Input Fields for Adding Train -->
+      <div class="card">
+        <div class="card-header">
+          Add Train
         </div>
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Destination</span>
+        <form class="card-body">
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Train Name</span>
+            </div>
+            <input type="text" class="form-control" id="trainName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
-          <input type="text" class="form-control" id="destination" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">First Train Time</span>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Destination</span>
+            </div>
+            <input type="text" class="form-control" id="destination" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
-          <input type="text" class="form-control" id="firstTrain" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Frequency</span>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">First Train Time</span>
+            </div>
+            <input type="text" class="form-control" id="firstTrain" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
-          <input type="text" id="frequency" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Frequency</span>
+            </div>
+            <input type="text" id="frequency" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div>
 
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </form>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
     </div>
 
   </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

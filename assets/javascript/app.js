@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', function(e) {
     }
   ];
 
+  // Initialize Firebase
+  const config = {
+    apiKey: 'AIzaSyD-0n59wiN163IIJPg4QmVr-Pxkuxx2h1I',
+    authDomain: 'traintime-add83.firebaseapp.com',
+    databaseURL: 'https://traintime-add83.firebaseio.com',
+    projectId: 'traintime-add83',
+    storageBucket: 'traintime-add83.appspot.com',
+    messagingSenderId: '600123360081'
+  };
+  firebase.initializeApp(config);
+  const database = firebase.database();
+
   const loadSchedule = () => {
     console.log('loadSchedule');
     let tableContents = '';
